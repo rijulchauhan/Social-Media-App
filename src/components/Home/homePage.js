@@ -20,11 +20,13 @@ export default function HomePage() {
                     <button onClick={(e) => handleClick(e)}>Delete</button>
                 </div>
             </div>
-            <Routes>
-                <Route path="/direct/inbox" element={<Index />} />
-                <Route path="/explore" element={<Explore />} />
-                <Route path="/" element={<Posts />} />
-            </Routes>
+            <div className="page">
+                <Routes>
+                    <Route path="/direct/inbox" element={<Index />} />
+                    <Route path="/explore" element={<Explore />} />
+                    <Route path="/" element={<Posts />} />
+                </Routes>
+            </div>
         </>
     )
 }

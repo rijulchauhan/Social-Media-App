@@ -7,56 +7,61 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.login{
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.mobile{
+.mobile {
   margin-right: 20px;
-  padding:200px 100px;
+  padding: 200px 100px;
 }
 
-.loginForm input{
-  margin:10px 5px;
+.loginForm input {
+  margin: 10px 5px;
 }
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #E8F9FD;
   position: fixed;
   width: 100%;
-  top:0px;
+  top: 0px;
+  z-index: 1;
 }
 
-.mainButtons{
+.mainButtons {
   display: flex;
 }
 
-.button{
-  padding:10px;
+.button {
+  padding: 10px;
 }
 
-.postLabel{ 
+.postLabel {
   margin: 10px;
   font-style: italic;
   font-weight: bold;
   font-size: large;
 }
 
-.postImage{   
+.postImage {
   margin: 10px;
 }
 
-.post{
+.post {
   border: 2px solid rgba(100, 100, 100, 0.575);
-  width:500px;
-  margin:15px;
+  margin: 15px;
 }
 
-.list{
+.list {
   list-style: none;
+}
+
+.page {
+  position: relative;
+  top: 50px;
 }
