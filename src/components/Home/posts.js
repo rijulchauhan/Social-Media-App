@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchCall } from "../../api/fetchCall";
 import Comments from "../ReactComponents/comment";
+
 export default function Posts() {
     const [data, setData] = useState([]);
     const [comments, setComments] = useState([]);
@@ -13,11 +14,11 @@ export default function Posts() {
     }, []);  //watch the array values to rerun the effect callback function : make sure all variables that are used in useEffect callback function should be in dependency list
 
     function fetchComments(e) {
+        const id = e.target.id;
+        const updateState = {};
         fetchCall('https://jsonplaceholder.typicode.com/comments')
             .then(result => {
-                const id = e.target.id;
-                const items = result.filter(item => item.postId == id)
-                const updateState = {};
+                const items = result.filter(item => item.postId == id);
                 updateState[id] = items;
                 setComments(updateState);
             })

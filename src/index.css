@@ -26,6 +26,10 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #E8F9FD;
+  position: fixed;
+  width: 100%;
+  top:0px;
 }
 
 .mainButtons{
