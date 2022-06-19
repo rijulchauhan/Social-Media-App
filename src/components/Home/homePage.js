@@ -4,13 +4,23 @@ import Index from "./index.js";
 import Explore from "./explore";
 import Posts from "./posts.js";
 
-export default function HomePage() {
+function handleClick(e){
+    debugger;    
+}
+export default function HomePage() {    
     return (
         <>
-            Hi, Rijul :)<br />
-            <NavLink to='/'>Home</NavLink><br />
-            <NavLink to='/direct/inbox/'>Profile</NavLink><br />
-            <NavLink to='/explore/'>Explore</NavLink><br />
+            <div className="navbar">
+                <div>Instagram</div>
+                <input type='text' placeholder="Search" />
+                <div className="mainButtons">
+                    <NavLink className='button' to='/'>Home</NavLink><br />
+                    <NavLink className='button' to='/direct/inbox/'>Profile</NavLink><br />
+                    <NavLink className='button' to='/explore/'>Explore</NavLink><br />
+                    <NavLink className='button' to='/explore/'>Account</NavLink><br />
+                    <button onClick={(e)=>handleClick(e)}>Delete</button>
+                </div>
+            </div>
             <Routes>
                 <Route path="/direct/inbox" element={<Index />} />
                 <Route path="/explore" element={<Explore />} />
