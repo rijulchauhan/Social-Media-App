@@ -1,13 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Index from "./index.js";
 import Explore from "./explore";
 import Posts from "./posts.js";
 
-function handleClick(e) {
-
-}
-export default function HomePage() {
+export default function HomePage({ handleLogoutClick }) {
     return (
         <>
             <div className="navbar">
@@ -17,7 +14,7 @@ export default function HomePage() {
                     <NavLink className='button' to='/direct/inbox/'>Profile</NavLink>
                     <NavLink className='button' to='/explore/'>Explore</NavLink>
                     <NavLink className='button' to='/explore/'>Account</NavLink>
-                    <button onClick={(e) => handleClick(e)}>Delete</button>
+                    <button onClick={handleLogoutClick}>Logout</button>
                 </div>
             </div>
             <div className="page">
